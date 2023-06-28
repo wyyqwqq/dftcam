@@ -13,9 +13,10 @@ conda env create --name envname --file=ptc3.yml
    * -a deep learning model supported in torchvision
    * -t target layer
    * -k topk class
-   * -i input image folder path
+   * -i input image folder path (should be JPEG images)
    * -cam CAM type (dftcam or convcam)
    * -l numbers of selected layers
+   outputs will be saved in the "results" folder.
 ```
 python main.py demo -a vgg16 -t 'features.29' -k 1 -i /PATH/TO/YOUR/IMAGE/FOLDER/ -cam dftcam -l 5
 ```
