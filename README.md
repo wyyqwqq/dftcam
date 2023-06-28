@@ -6,7 +6,7 @@
 
 1. Install required environment using conda virtual environment:
 ```
-conda env create --name envname --file=ptc3.yml
+conda env create --name ptc3 --file=ptc3.yml
 ```
 Torch version should be >= '1.13.1+cu117'
 
