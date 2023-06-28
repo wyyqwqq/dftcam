@@ -81,7 +81,7 @@ class GuidedBackPropagation(BackPropagation):
 class DFTCAM(_BaseWrapper):
 
     def __init__(self, model, candidate_layers=None):
-        super(GradCAM, self).__init__(model)
+        super(DFTCAM, self).__init__(model)
         self.fmap_pool = {}
         self.grad_pool = {}
         self.candidate_layers = candidate_layers  # list
@@ -154,7 +154,7 @@ class DFTCAM(_BaseWrapper):
             else:
                 dft = torch.fft.fft2(grads[:,i,:,:], dim=(-2, -1))
                 dft = dft.real
-                dft = self.getCorners(dft) 
+                dft = self.getCorners(dft)
                 DFT_matrix = torch.cat((DFT_matrix, dft.unsqueeze(0)), dim=0)
 
         dot_product = torch.mm(DFT_matrix, torch.transpose(DFT_matrix, 0, 1))
