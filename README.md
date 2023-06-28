@@ -21,4 +21,4 @@ Torch version should be >= '1.13.1+cu117'
 ```
 python main.py demo -a vgg16 -t 'features.29' -k 1 -i /PATH/TO/YOUR/IMAGE/FOLDER/ -cam dftcam -l 5
 ```
-outputs will be saved in the "results" folder.
+Outputs will be saved in the "results" folder.
